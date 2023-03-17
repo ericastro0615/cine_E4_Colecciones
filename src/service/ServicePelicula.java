@@ -53,6 +53,7 @@ public class ServicePelicula {
 
     }
 
+
     public void directorAlf (ArrayList <PeliculaClass> listaPelis) {
         Collections.sort (listaPelis, ComparatorClass.pelisDirectorAlfAsc);
         System.out.println ("\n\nLISTA DE PELICULAS ORDEN ALFABETICAMENTE - DIRECTOR");
@@ -61,16 +62,16 @@ public class ServicePelicula {
         }
     }
 
-    public void titulosAlf (ArrayList <PeliculaClass> listaPelis, ComparatorClass cp) {
-        Collections.sort ( listaPelis, cp.pelisTitulosAlf );
+    public void titulosAlf (ArrayList <PeliculaClass> listaPelis ) {
+        Collections.sort ( listaPelis,   ComparatorClass.pelisTitulosAlf );
         System.out.println ("\n\nLISTA DE PELICULAS ORDENADAS ALFABETICAMENTE - TITULO");
         for (PeliculaClass aux : listaPelis) {
             System.out.println (aux);
         }
     }
 
-    public  void duracionPeli (ArrayList <PeliculaClass> listaPelis, ComparatorClass cp ) {
-        Collections.sort ( listaPelis, cp.pelisDuracionAsc );
+    public  void duracionPeli (ArrayList <PeliculaClass> listaPelis  ) {
+        Collections.sort ( listaPelis, ComparatorClass.pelisDuracionAsc );
         System.out.println ("\n\n LISTA DE PELICULAS CON DURACION ASCENDENTE");
             mostrarPelis ( listaPelis );
         }
