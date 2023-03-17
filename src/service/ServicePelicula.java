@@ -27,17 +27,18 @@ public class ServicePelicula {
         //creo array
         ArrayList <PeliculaClass> listaDePelis = new ArrayList<> ();
         //inicializo
-        PeliculaClass peliObj = new PeliculaClass ();
+
         do {
+            PeliculaClass peliObj = new PeliculaClass ();
             System.out.println ("ingrese el nombre de la pelicula ");
             peliObj.setTitulo ( sc.next () );
             System.out.println ("Ingrese el nombre del director");
             peliObj.setDirector ( sc.next  () );
-            System.out.println ("ingrese la duración de la pelicula (en hrs, utilizando comas , ) ");
+            System.out.println ("ingrese la duración de la pelicula (en hr. utilizando comas , ) ");
             peliObj.setDuracion ( sc.nextDouble () );
-            listaDePelis.add ( peliObj );
+           // listaDePelis.add ( peliObj );
             System.out.println ("Desea agregar una nueva pelicula? si / no");
-
+            listaDePelis.add ( peliObj );
         } while (sc.next ().equalsIgnoreCase ( "si" )? true: false);
 
         mostrarPelis ( listaDePelis );
